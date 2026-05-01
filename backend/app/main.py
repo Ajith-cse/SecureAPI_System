@@ -10,6 +10,7 @@ from app.websocket import manager
 from routes.auth import router as auth_router
 from routes.protected import router as protected_router
 from routes.admin import router as admin_router
+import os
 
 app = FastAPI(
     title="Secure & Scalable REST API System",
@@ -18,6 +19,8 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
 )
+
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "").split(",")
 
 app.add_middleware(
     CORSMiddleware,
