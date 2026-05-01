@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+dist/
+build/
+*.egg
+
+# Environment — NEVER commit real .env
+.env
+!.env.example
+
+# Node
+node_modules/
+dist/
+.cache/
+*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
